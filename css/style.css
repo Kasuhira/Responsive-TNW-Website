@@ -1,8 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  border: solid red 1px;
+  /* border: solid red 1px; */
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
@@ -24,6 +25,7 @@ nav section:last-child {
   background-color: white;
   color: rgb(180, 180, 180);
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 nav section:last-child span:hover {
@@ -42,39 +44,81 @@ nav section div span:hover {
   color: white;
   cursor: pointer;
 }
+
 /* Navigation Section End ****************************** */
 
 header .featured-articles {
-  width: 80%;
-  height: 60vh;
-  margin: 10px auto;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  gap: 10px;
+}
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.featured-articles > *:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.featured-articles > *:first-child .bgOverlay {
+  background-image: linear-gradient(to bottom, transparent, black);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.featured-articles > *:not(:first-child) .bgOverlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.featured-articles > div {
+  position: relative;
+}
+
+.featured-articles img {
+  width: 100%;
+}
+
+.featured-articles .category {
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 0.8em;
+}
+
+.featured-articles h2 {
+  color: white;
+}
+
+.featured-articles > div:not(:first-child) h2 {
+  color: white;
+  font-size: 1em;
+}
+
+.featured-articles span {
+  color: darkgray;
+  font-size: 0.7em;
+}
+
+.featured-articles span a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured-articles span a:hover {
+  text-decoration: underline;
+}
+
+
+.featured-articles .overlay {
+  position: absolute;
+  bottom: 0;
   padding: 10px;
-}
-
-.featured-articles div {
-  height: 95%;
-  width: 95%;
-  margin: auto;
-}
-
-.featured-articles aside {
-  height: 95%;
-  width: 95%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.featured-articles aside div {
-  margin: auto;
-  box-sizing: border-box;
-  width: 90%;
-  height: 90%;
 }
 
 /* Header Section End ************************ */
