@@ -75,7 +75,7 @@ header .featured-articles {
 }
 
 .featured-articles > *:first-child .bgOverlay {
-  background-image: linear-gradient(to bottom, transparent, black);
+  background: 10px 10px / 50% url('../img/logo.svg') no-repeat,linear-gradient(135deg, red, transparent), linear-gradient(to bottom, transparent, black);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -162,14 +162,16 @@ header .featured-articles {
     width: 100%;
     top: 0;
   }
+
+  .featured-articles > *:first-child .bgOverlay {
+    background: linear-gradient(to bottom, transparent, black);
+  }
   
   .featured-articles > div h2 {
     color: white;
     font-size: 1em;
   }
 }
-
-/* Header Section End ************************ */
 
 /* Latest News Section */
 
@@ -415,6 +417,14 @@ header .featured-articles {
 
   .latest-funding-rounds article {
     grid-column: span 12;
+  }
+
+  .latest-funding-rounds .funding-features li {
+    font-size: 0.9em;
+  }
+
+  .latest-funding-rounds .funding-news {
+    font-size: 0.9em;
   }
 }
 
