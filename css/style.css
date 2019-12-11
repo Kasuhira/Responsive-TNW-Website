@@ -266,7 +266,7 @@ header .featured-articles {
 }
 
 
-/* Latest Founding rounds */
+/* Latest Funding rounds */
 
 .latest-funding-rounds {
   display: grid;
@@ -298,6 +298,7 @@ header .featured-articles {
 .latest-funding-rounds .headings li {
   display: inline-block;
   vertical-align: sub;
+  font-size: 0.7em;
 }
 
 
@@ -313,7 +314,6 @@ header .featured-articles {
 .latest-funding-rounds .headings li a {
   text-decoration: none;
   color: #f42;
-  font-size: 0.7em;
 }
 
 .latest-funding-rounds .headings li a:hover {
@@ -392,6 +392,40 @@ header .featured-articles {
 .latest-funding-rounds .funding-news a {
   color: lightgray;
   text-decoration: none;
+}
+
+
+@media screen and (max-width:767px) {
+  .latest-funding-rounds .headings {
+    flex-direction: column;
+  }
+
+  .latest-funding-rounds .headings ul {
+    margin-top: 10px;
+  }
+
+  .latest-funding-rounds .headings li {
+    display: block;
+    font-size: 1em;
+  }
+
+  .latest-funding-rounds .headings li:not(:first-child)::before {
+    display: none;
+  }
+
+  .latest-funding-rounds article {
+    grid-column: span 12;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .latest-funding-rounds article {
+    grid-column: span 4;
+  }
+
+  .latest-funding-rounds article:last-of-type {
+    display: none;
+  }
 }
 
 .most-popular {
