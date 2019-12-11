@@ -15,11 +15,32 @@ nav section {
   justify-content: space-between;
   width: 100%;
   height: 2.5vw;
-  background-color: rgba(200, 200, 200, 0.5);
+  background-color: rgb(28, 28, 28);
+  color: rgb(156, 156, 156);
+  font-size: 12px;
+}
+
+nav section:last-child {
+  background-color: white;
+  color: rgb(180, 180, 180);
+  font-size: 16px;
+}
+
+nav section:last-child span:hover {
+  color: rgb(28, 28, 28);
 }
 
 nav section div {
   margin: auto 10px;
+}
+
+nav section div span {
+  margin: auto 5px;
+}
+
+nav section div span:hover {
+  color: white;
+  cursor: pointer;
 }
 /* Navigation Section End ****************************** */
 
@@ -27,7 +48,7 @@ header .featured-articles {
   width: 80%;
   height: 60vh;
   margin: 10px auto;
-  background-color: rgba(200, 200, 200, 0.5);
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -38,7 +59,6 @@ header .featured-articles {
   height: 95%;
   width: 95%;
   margin: auto;
-  background-color: rgba(200, 200, 200, 0.5);
 }
 
 .featured-articles aside {
@@ -48,7 +68,6 @@ header .featured-articles {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: rgba(200, 200, 200, 0.5);
 }
 
 .featured-articles aside div {
@@ -64,14 +83,12 @@ header .featured-articles {
   width: 90%;
   height: 70vh;
   margin: 10px auto;
-  background-color: rgba(200, 200, 200, 0.5);
 }
 
 .latest-news article {
   width: 25%;
   height: 50%;
   float: left;
-  background-color: rgba(200, 200, 200, 0.5);
 }
 
 .latest-funding-rounds {
@@ -97,4 +114,91 @@ header .featured-articles {
   width: 25%;
   height: 100%;
   float: left;
+}
+
+.most-popular {
+  width: 90%;
+  height: 300vh;
+  margin: auto;
+}
+
+.most-popular article {
+  width: 33.333%;
+  height: 33.333%;
+  float: left;
+}
+
+.latest-deals {
+  width: 90%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.latest-deals .headings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest-deals .articles {
+  width: 100%;
+  height: 100%;
+}
+
+.latest-deals .articles article {
+  display: flex;
+  width: 25%;
+  height: 50%;
+  float: left;
+}
+
+footer {
+  margin-top: 10px;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.contact .share {
+  width: 60%;
+  height: 35%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.contact .share div {
+  width: 100%;
+}
+
+.contact .info {
+  text-align: center;
+  margin: auto;
+}
+
+footer .copyright {
+  height: 60%;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.copyright div {
+  height: 20%;
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
