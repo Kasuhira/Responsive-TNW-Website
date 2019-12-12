@@ -446,6 +446,8 @@ header .featured-articles {
   }
 }
 
+/***************************************************************************************/
+/*
 .most-popular {
   width: 90%;
   height: 300vh;
@@ -457,7 +459,7 @@ header .featured-articles {
   height: 33.333%;
   float: left;
 }
-
+*/
 .latest-deals {
   width: 90%;
   height: 80vh;
