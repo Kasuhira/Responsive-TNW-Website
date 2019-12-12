@@ -219,7 +219,11 @@
                 </article>
         </section>
         <section class='most-popular'>
-            <article></article>
+            <article>
+                <div class="image">
+                    
+                </div>
+            </article>
             <article></article>
             <article></article>
             <article></article>
@@ -229,11 +233,28 @@
             <article></article>
         </section>
         <style>
-            .most-popular article {
-                background-color: aqua;
+
+            .most-popular{
+                display: grid ;
+                width: 100%;
+                gap : 3px;
+                grid-template-columns: 1fr 1fr 1fr;
             }
+
+            .most-popular article {
+                background-color: lightgray ;
+                gap: 3px ;
+                width: 100% ;
+                height: 100% ;
+            }
+
+            .most-popular article .image {
+                width: 100% ;
+                height: 270px;
+            }
+
         </style>
-        <section class='latest-deals'>
+            <section class='latest-deals'>
             <div class="headings">
                 <span>Latest Deals</span>
                 <span>View More</span>

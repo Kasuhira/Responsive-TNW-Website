@@ -447,19 +447,30 @@ header .featured-articles {
 }
 
 /***************************************************************************************/
-/*
-.most-popular {
-  width: 90%;
-  height: 300vh;
-  margin: auto;
-}
 
-.most-popular article {
-  width: 33.333%;
-  height: 33.333%;
-  float: left;
-}
-*/
+
+
+            .most-popular{
+                display: grid ;
+                width: 100%;
+                gap : 3px;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .most-popular article {
+                background-color: lightgray ;
+                gap: 3px ;
+                width: 100% ;
+                height: 100% ;
+            }
+
+            .most-popular article .image {
+                width: 100% ;
+                height: 270px;
+            }
+
+        
+
 .latest-deals {
   width: 90%;
   height: 80vh;
