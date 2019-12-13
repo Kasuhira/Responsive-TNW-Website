@@ -570,6 +570,17 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
 .latest-deals .headings {
   display: flex;
   justify-content: space-between;
+  margin: 20px auto;
+  width: 90vw;
+  color: #f42;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+@media screen and (min-width:1280px) {
+  .latest-deals .headings {
+    width: 1192px;
+  }
 }
 
 .latest-deals .articles {
@@ -643,6 +654,8 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
   }
 }
 
+/**************************************************************************/
+
 footer {
   margin-top: 10px;
   width: 100%;
@@ -658,10 +671,11 @@ footer .contact {
   justify-content: space-around;
   height: 100%;
   width: 100%;
+  background-color: rgb(26,26,28);
 }
 
 .contact .share {
-  width: 60%;
+  width: 40%;
   height: 35%;
   margin: auto;
   display: flex;
@@ -670,7 +684,16 @@ footer .contact {
 }
 
 .contact .share div {
-  width: 100%;
+  width: 50px;
+  height: 50px;
+  background-color:rgb(77, 77, 77);
+  border-radius: 50%;
+}
+
+.contact .share div .icon:first-child{
+  background-image: transparent url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb9-s4eRzuZwIJORr4g75qZA2VqmTLCXfNKrOKgyCh-IVVpzFu');
+  background-size: 100% ;
+  background-position: center;
 }
 
 .contact .info {
