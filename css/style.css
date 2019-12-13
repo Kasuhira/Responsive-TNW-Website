@@ -44,7 +44,7 @@ nav section:last-child {
   font-size: 16px;
   text-transform: uppercase;
   padding: 10px 0;
-  box-shadow: 0 0 32px rgba(0,0,0,.15);
+  box-shadow: 0 0 32px rgba(0, 0, 0, .15);
   display: flex;
   justify-content: space-between;
 }
@@ -77,20 +77,20 @@ header .featured-articles {
   gap: 10px;
 }
 
-.featured-articles > *:first-child {
+.featured-articles>*:first-child {
   grid-column: span 2;
   grid-row: span 2;
 }
 
-.featured-articles > *:first-child .bgOverlay {
-  background: 10px 10px / 50% url('../img/logo.svg') no-repeat,linear-gradient(135deg, red, transparent), linear-gradient(to bottom, transparent, black);
+.featured-articles>*:first-child .bgOverlay {
+  background: 10px 10px / 50% url('../img/logo.svg') no-repeat, linear-gradient(135deg, red, transparent), linear-gradient(to bottom, transparent, black);
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
 }
 
-.featured-articles > * .bgOverlay {
+.featured-articles>* .bgOverlay {
   background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   height: 100%;
@@ -98,11 +98,11 @@ header .featured-articles {
   top: 0;
 }
 
-.featured-articles > * .bgOverlay:hover {
+.featured-articles>* .bgOverlay:hover {
   background-color: transparent;
 }
 
-.featured-articles > div {
+.featured-articles>div {
   position: relative;
 }
 
@@ -121,7 +121,7 @@ header .featured-articles {
   color: white;
 }
 
-.featured-articles > div:not(:first-child) h2 {
+.featured-articles>div:not(:first-child) h2 {
   color: white;
   font-size: 1em;
 }
@@ -148,12 +148,12 @@ header .featured-articles {
 }
 
 @media screen and (max-width:767px) {
-  .featured-articles > *:first-child {
+  .featured-articles>*:first-child {
     grid-column: span 3;
     grid-row: auto;
   }
 
-  .featured-articles > * {
+  .featured-articles>* {
     grid-column: span 3;
     height: 30vh;
   }
@@ -162,8 +162,8 @@ header .featured-articles {
     object-fit: none;
     object-position: top center;
   }
-  
-  .featured-articles > * .bgOverlay {
+
+  .featured-articles>* .bgOverlay {
     background-image: linear-gradient(to bottom, transparent, black);
     position: absolute;
     height: 100%;
@@ -171,11 +171,11 @@ header .featured-articles {
     top: 0;
   }
 
-  .featured-articles > *:first-child .bgOverlay {
+  .featured-articles>*:first-child .bgOverlay {
     background: linear-gradient(to bottom, transparent, black);
   }
-  
-  .featured-articles > div h2 {
+
+  .featured-articles>div h2 {
     color: white;
     font-size: 1em;
   }
@@ -204,7 +204,7 @@ header .featured-articles {
   grid-column: span 3;
 }
 
-.latest-news article > a:first-child {
+.latest-news article>a:first-child {
   display: block;
   width: 100%;
   position: relative;
@@ -235,6 +235,7 @@ header .featured-articles {
   color: #f42;
   text-decoration: underline;
 }
+
 .latest-news span {
   color: gray;
   font-size: 0.7em;
@@ -249,8 +250,8 @@ header .featured-articles {
   .latest-news article {
     grid-column: span 12;
   }
-  
-  .latest-news article > a:first-child {
+
+  .latest-news article>a:first-child {
     display: inline-block;
     position: relative;
     height: 75px;
@@ -259,7 +260,7 @@ header .featured-articles {
     margin-right: 10px;
     float: left;
   }
-  
+
   .latest-news article img {
     width: 100%;
     height: 100%;
@@ -296,7 +297,7 @@ header .featured-articles {
 
 .latest-funding-rounds article {
   grid-column: span 3;
-  background-color: rgba(255,68,34,.03);
+  background-color: rgba(255, 68, 34, .03);
 }
 
 .latest-funding-rounds .headings ul {
@@ -346,7 +347,7 @@ header .featured-articles {
 }
 
 .latest-funding-rounds .funding-subtitle {
-  background-color: rgba(255,68,34,.08);
+  background-color: rgba(255, 68, 34, .08);
   padding: 10px 0 10px 80px;
 }
 
@@ -395,7 +396,7 @@ header .featured-articles {
 .latest-funding-rounds .funding-news {
   color: rgb(77, 77, 77);
   font-size: 0.7em;
-  border-top: 1px rgba(255,68,34,0.2) solid;
+  border-top: 1px rgba(255, 68, 34, 0.2) solid;
   padding: 10px;
 }
 
@@ -450,26 +451,112 @@ header .featured-articles {
 
 
 
-            .most-popular{
-                display: grid ;
-                width: 100%;
-                gap : 3px;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
+.most-popular {
+  display: grid;
+  width: 1192px;
+  gap: 3px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
-            .most-popular article {
-                background-color: lightgray ;
-                gap: 3px ;
-                width: 100% ;
-                height: 100% ;
-            }
+@media screen and (max-width:1023px){
+  .most-popular{
+    grid-template-columns: 1fr;
+    width: 90vw;
+  }
 
-            .most-popular article .image {
-                width: 100% ;
-                height: 270px;
-            }
 
-        
+}
+
+.most-popular .title {
+  margin : 10px 0;
+  font-size: xx-large;
+  color: #f42;
+  font-weight: 900;
+}
+
+.most-popular article {
+  gap: 3px;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}
+
+.most-popular article .image {
+  width: 100%;
+  height: 270px;
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/China-app-368x276.jpg');
+  background-position: center;
+  background-size: 100%;
+}
+
+.most-popular article .gradient {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgb(26,26,28);
+  background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
+}
+
+.most-popular article .gradient p {
+  margin: 5px 0 ;
+  color: whitesmoke;
+}
+
+.most-popular article .gradient p strong {
+  font-size: x-large;
+}
+
+.most-popular article .gradient p:last-child {
+  color: grey ;
+  font-size: small;
+}
+
+.most-popular .latest {
+  width: 100%;
+  height: 100px;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #f42;
+  background-color: rgba(255,68,34,.06) ;
+}
+
+.most-popular .left {
+  width: 80%;
+  padding: 10px;
+}
+
+.most-popular .left p:first-child {
+  margin-top : 15px ;
+}
+
+.most-popular .right {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_4ccb0673.png');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular ul {
+  height: 300px;
+}
+
+.most-popular ul li {
+  height: 30px;
+  margin: 15px 10px;
+  color:rgb(56, 56, 56);
+  font-size: small ;
+  border-bottom: solid 1px rgba(156, 156, 156, 0.5);
+}
+
+/***************************************************************************/
 
 .latest-deals {
   width: 90%;
@@ -478,6 +565,7 @@ header .featured-articles {
   display: flex;
   flex-direction: column;
 }
+
 .latest-deals .headings {
   display: flex;
   justify-content: space-between;
