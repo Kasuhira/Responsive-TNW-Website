@@ -454,7 +454,7 @@ header .featured-articles {
 .most-popular {
   display: grid;
   width: 1192px;
-  gap: 3px;
+  gap: 20px;
   margin: auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -464,8 +464,6 @@ header .featured-articles {
     grid-template-columns: 1fr;
     width: 90vw;
   }
-
-
 }
 
 .most-popular .title {
@@ -556,15 +554,18 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
   border-bottom: solid 1px rgba(156, 156, 156, 0.5);
 }
 
-/***************************************************************************/
-
-.latest-deals {
-  width: 90%;
-  height: 80vh;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+.most-popular ul li:last-child {
+  border : none;
 }
+
+@media screen and (max-width:1023px){
+  .most-popular ul li{
+    font-size: 20px;
+    list-style: none;
+  }
+}
+
+/***************************************************************************/
 
 .latest-deals .headings {
   display: flex;
@@ -572,15 +573,74 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
 }
 
 .latest-deals .articles {
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width : 1192px ;
+  height: auto;
+  margin: auto;
+  gap: 5px;
 }
 
 .latest-deals .articles article {
-  display: flex;
-  width: 25%;
-  height: 50%;
-  float: left;
+  width: 90%;
+  height: auto ;
+  margin: auto;
+}
+
+.latest-deals .articles .image {
+  background-image: url('https://cdnp1.stackassets.com/a1885052002064f3903e6c4d22b09695ee1224e5/store/6ad863301975cc44ff2d8ca2233009444670eee3b2e453cc521275dd1a09/sale_24048_primary_image.jpg');
+  background-size: 102% ;
+  background-position: center; 
+  width: 100%;
+  height: 201px;
+}
+
+.latest-deals .articles p {
+  margin-top: 8px;
+}
+
+.latest-deals .articles .discount {
+  text-decoration: line-through;
+  font-size: small;
+  color: gray;
+}
+
+.latest-deals .articles p span {
+  color: rgb(56,56,56);
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width:1023px) {
+  .latest-deals .articles {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: auto;
+  }
+
+  .latest-deals .articles article {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .latest-deals .articles .image {
+    width: 300px;
+  } 
+
+  .latest-deals .articles .text {
+    margin: auto 25px;
+  }
+
+  .latest-deals .articles strong {
+    font-size: x-large;
+  }
+
+  .latest-deals .articles p span {
+    font-size : 32px;
+  }
 }
 
 footer {
