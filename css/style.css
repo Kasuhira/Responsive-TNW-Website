@@ -12,9 +12,65 @@ main {
   padding: 0 20px;
 }
 
+.latest-news h3 a {
+  color: black;
+  text-decoration: none;
+}
+
+.featured-articles span a {
+  color: inherit;
+  text-decoration: none;
+}
+
 section h2:first-child a {
   color: #f42;
   text-decoration: none;
+}
+
+.latest-funding-rounds .funding-news a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.latest-funding-rounds .funding-features a {
+  text-decoration: none;
+  color: rgb(77, 77, 77);
+}
+
+.latest-news {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: space-around;
+  gap: 15px;
+  margin: 10px auto;
+  max-width: 1192px;
+}
+
+.latest-news a:hover {
+  color: #000;
+}
+
+.latest-funding-rounds .headings li a {
+  text-decoration: none;
+  color: #f42;
+}
+
+.latest-news h3 a:hover {
+  color: #f42;
+  text-decoration: underline;
+}
+
+.latest-news article > a:first-child {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  /* Hack for keeping image aspect ratio based on https://css-tricks.com/aspect-ratio-boxes/ */
+  padding-top: 56.25%;
+}
+
+.featured-articles span a:hover {
+  text-decoration: underline;
 }
 
 section h2:first-child a:hover {
@@ -50,17 +106,42 @@ nav section:last-child {
   height: 48px;
 }
 
+nav section div span {
+  margin: auto 5px;
+}
+
+.copyright span {
+  margin: 0 5px;
+}
+
 nav section div {
   margin: auto 10px;
 }
 
-nav section div span {
-  margin: auto 5px;
+.latest-news span {
+  color: gray;
+  font-size: 0.7em;
+}
+
+.featured-articles span {
+  color: darkgray;
+  font-size: 0.7em;
 }
 
 nav section div span:hover {
   color: white;
   cursor: pointer;
+}
+
+.contact .info span {
+  margin: 0 8px;
+  text-transform: uppercase;
+}
+
+.latest-deals .articles p span {
+  color: rgb(56, 56, 56);
+  font-size: 16px;
+  margin-left: 10px;
 }
 
 nav section:last-child span:hover {
@@ -148,6 +229,11 @@ header .featured-articles {
   gap: 10px;
 }
 
+.featured-articles > * {
+  grid-column: span 3;
+  height: 30vh;
+}
+
 .featured-articles > *:first-child {
   grid-column: span 2;
   grid-row: span 2;
@@ -165,6 +251,29 @@ header .featured-articles {
   position: relative;
 }
 
+.copyright div {
+  height: 20%;
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact .share div {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(77, 77, 77);
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 2px solid rgb(77, 77, 77);
+}
+
+.contact .share div:hover {
+  background-color: rgb(26, 26, 28);
+  border: 2px solid rgb(77, 77, 77);
+}
+
 .featured-articles img {
   width: 100%;
   height: 100%;
@@ -180,23 +289,18 @@ header .featured-articles {
   color: white;
 }
 
+.latest-news h2 {
+  grid-column: 1 / -1;
+}
+
+.latest-deals .headings h2 {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
 .featured-articles > div:not(:first-child) h2 {
   color: white;
   font-size: 1em;
-}
-
-.featured-articles span {
-  color: darkgray;
-  font-size: 0.7em;
-}
-
-.featured-articles span a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.featured-articles span a:hover {
-  text-decoration: underline;
 }
 
 .featured-articles .overlay {
@@ -209,11 +313,6 @@ header .featured-articles {
   .featured-articles > *:first-child {
     grid-column: span 3;
     grid-row: auto;
-  }
-
-  .featured-articles > * {
-    grid-column: span 3;
-    height: 30vh;
   }
 
   .featured-articles img {
@@ -255,34 +354,12 @@ header .featured-articles {
 
 /* Latest News Section */
 
-.latest-news {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  justify-content: space-around;
-  gap: 15px;
-  margin: 10px auto;
-  max-width: 1192px;
-}
-
-.latest-news h2 {
-  grid-column: 1 / -1;
-}
-
-.latest-news a:hover {
-  color: #000;
-}
-
 .latest-news article {
   grid-column: span 3;
 }
 
-.latest-news article > a:first-child {
-  display: block;
-  width: 100%;
-  position: relative;
-
-  /* Hack for keeping image aspect ratio based on https://css-tricks.com/aspect-ratio-boxes/ */
-  padding-top: 56.25%;
+.copyright img {
+  width: 50px;
 }
 
 .latest-news article img {
@@ -297,26 +374,6 @@ header .featured-articles {
   font-weight: 900;
   line-height: 1.1em;
   margin-top: 10px;
-}
-
-.latest-news h3 a {
-  color: black;
-  text-decoration: none;
-}
-
-.latest-news h3 a:hover {
-  color: #f42;
-  text-decoration: underline;
-}
-
-.latest-news span {
-  color: gray;
-  font-size: 0.7em;
-}
-
-.latest-news span a {
-  color: inherit;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -378,10 +435,26 @@ header .featured-articles {
   margin: 0;
 }
 
+.most-popular ul li {
+  padding: 15px 10px;
+  color: rgb(56, 56, 56);
+  font-size: small;
+  border-bottom: solid 1px rgba(156, 156, 156, 0.5);
+}
+
 .latest-funding-rounds .headings li {
   display: inline-block;
   vertical-align: sub;
   font-size: 0.7em;
+}
+
+.most-popular .article ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 .latest-funding-rounds .headings li:not(:first-child)::before {
@@ -393,9 +466,8 @@ header .featured-articles {
   margin: 0 5px;
 }
 
-.latest-funding-rounds .headings li a {
-  text-decoration: none;
-  color: #f42;
+.latest-funding-rounds .funding-features a:hover {
+  color: black;
 }
 
 .latest-funding-rounds .headings li a:hover {
@@ -455,25 +527,11 @@ header .featured-articles {
   font-size: 0.7em;
 }
 
-.latest-funding-rounds .funding-features a {
-  text-decoration: none;
-  color: rgb(77, 77, 77);
-}
-
-.latest-funding-rounds .funding-features a:hover {
-  color: black;
-}
-
 .latest-funding-rounds .funding-news {
   color: rgb(77, 77, 77);
   font-size: 0.7em;
   border-top: 1px rgba(255, 68, 34, 0.2) solid;
   padding: 10px;
-}
-
-.latest-funding-rounds .funding-news a {
-  color: lightgray;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -631,6 +689,10 @@ header .featured-articles {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(225, 241, 245, 0) 100%);
 }
 
+.latest-deals .articles p {
+  margin-top: 8px;
+}
+
 .most-popular article .gradient p {
   margin: 5px 0;
   color: whitesmoke;
@@ -638,6 +700,10 @@ header .featured-articles {
 
 .most-popular article .gradient p strong {
   font-size: x-large;
+}
+
+.most-popular .left p:first-child {
+  margin-top: 15px;
 }
 
 .most-popular article .gradient p:last-child {
@@ -661,32 +727,12 @@ header .featured-articles {
   padding: 10px;
 }
 
-.most-popular .left p:first-child {
-  margin-top: 15px;
-}
-
 .most-popular .right {
   background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_4ccb0673.png');
   background-position: center;
   background-size: 200%;
   height: 100px;
   width: 25%;
-}
-
-.most-popular ul li {
-  padding: 15px 10px;
-  color: rgb(56, 56, 56);
-  font-size: small;
-  border-bottom: solid 1px rgba(156, 156, 156, 0.5);
-}
-
-.most-popular .article ul li::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: red; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 .most-popular ul li:last-child {
@@ -712,11 +758,6 @@ header .featured-articles {
   margin: 20px auto;
   width: 90vw;
   color: #f42;
-  font-weight: bold;
-  font-size: xx-large;
-}
-
-.latest-deals .headings h2 {
   font-weight: bold;
   font-size: xx-large;
 }
@@ -748,20 +789,10 @@ header .featured-articles {
   object-fit: contain;
 }
 
-.latest-deals .articles p {
-  margin-top: 8px;
-}
-
 .latest-deals .articles .discount {
   text-decoration: line-through;
   font-size: small;
   color: gray;
-}
-
-.latest-deals .articles p span {
-  color: rgb(56, 56, 56);
-  font-size: 16px;
-  margin-left: 10px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -830,20 +861,6 @@ footer .contact {
   flex-direction: row;
 }
 
-.contact .share div {
-  width: 50px;
-  height: 50px;
-  background-color: rgb(77, 77, 77);
-  border-radius: 50%;
-  margin: 0 10px;
-  border: 2px solid rgb(77, 77, 77);
-}
-
-.contact .share div:hover {
-  background-color: rgb(26, 26, 28);
-  border: 2px solid rgb(77, 77, 77);
-}
-
 .contact .share img {
   width: 26px;
   height: 26px;
@@ -860,11 +877,6 @@ footer .contact {
   color: rgb(180, 180, 180);
 }
 
-.contact .info span {
-  margin: 0 8px;
-  text-transform: uppercase;
-}
-
 .contact .info span:hover {
   color: #fff;
   cursor: pointer;
@@ -878,27 +890,10 @@ footer .copyright {
   color: whitesmoke;
 }
 
-.copyright img {
-  width: 50px;
-}
-
 .copyright img:last-child {
   width: 100px;
 }
 
-.copyright span {
-  margin: 0 5px;
-}
-
 footer b {
   color: #f42;
-}
-
-.copyright div {
-  height: 20%;
-  width: 70%;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
