@@ -785,7 +785,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
 .latest-deals .articles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width : 1192px ;
+  max-width : 1192px ;
   height: auto;
   margin: auto;
   gap: 5px;
@@ -797,13 +797,10 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
   margin: auto;
 }
 
-.latest-deals .articles .image {
-  background-image: url('https://cdnp1.stackassets.com/a1885052002064f3903e6c4d22b09695ee1224e5/store/6ad863301975cc44ff2d8ca2233009444670eee3b2e453cc521275dd1a09/sale_24048_primary_image.jpg');
-  background-size: 102% ;
-  background-position: center;
-  background-repeat: no-repeat; 
+.latest-deals .articles img { 
   width: 100%;
-  height: 201px;
+  max-height: 200px;
+  object-fit: contain;
 }
 
 .latest-deals .articles p {
@@ -822,10 +819,16 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
   margin-left: 10px;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .latest-deals .articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media screen and (max-width:767px) {
   .latest-deals .articles {
     grid-template-columns: 1fr;
-    width: 100%;
     margin: auto;
   }
 
@@ -837,7 +840,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
     justify-content: flex-start;
   }
 
-  .latest-deals .articles .image {
+  .latest-deals .articles img {
     width: 300px;
   } 
 
