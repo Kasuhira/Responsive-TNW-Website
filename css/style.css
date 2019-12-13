@@ -538,16 +538,21 @@ header .featured-articles {
 
 .most-popular {
   display: grid;
-  width: 1192px;
+  max-width: 1192px;
   gap: 20px;
   margin: auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media screen and (max-width:1023px){
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .most-popular {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width:767px){
   .most-popular{
     grid-template-columns: 1fr;
-    width: 90vw;
   }
 }
 
@@ -677,7 +682,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
   margin-top : 15px ;
 }
 
-.most-popular .right1 {
+.most-popular .right {
   background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_4ccb0673.png');
   background-position: center;
   background-size: 200%;
@@ -685,73 +690,22 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
   width: 25%;
 }
 
-.most-popular .right2 {
-  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/iPhone-11.00_05_06_23.Still019.png');
-  background-position: center;
-  background-size: 200%;
-  height: 100px; 
-  width: 25%;
-}
-
-.most-popular .right3 {
-  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/1-11.jpg');
-  background-position: center;
-  background-size: 200%;
-  height: 100px; 
-  width: 25%;
-}
-
-.most-popular .right4 {
-  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/Annotation-2019-09-19-121214.png');
-  background-position: center;
-  background-size: 200%;
-  height: 100px; 
-  width: 25%;
-}
-
-.most-popular .right5 {
-  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/video-gaming.jpg');
-  background-position: center;
-  background-size: 200%;
-  height: 100px; 
-  width: 25%;
-}
-
-.most-popular .right6 {
-  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/04/Untitled-design-5.jpg');
-  background-position: center;
-  background-size: 200%;
-  height: 100px; 
-  width: 25%;
-}
-
-.most-popular .right7 {
-  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Press-Conference-with-Eric-Esrailian-Alexis-Ohanian-Hakob-Arshakyan-Yervant-Zorian-and-Serj-Tankian-hed.jpg');
-  background-position: center;
-  background-size: 200%;
-  height: 100px; 
-  width: 25%;
-}
-
-.most-popular .right8 {
-  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Cavier-Jesus-Phone.jpg');
-  background-position: center;
-  background-size: 200%;
-  height: 100px; 
-  width: 25%;
-}
-
-.most-popular ul {
-  height: 300px;
-}
-
 .most-popular ul li {
-  height: 30px;
-  margin: 15px 10px;
+  padding: 15px 10px;
   color:rgb(56, 56, 56);
   font-size: small ;
   border-bottom: solid 1px rgba(156, 156, 156, 0.5);
 }
+
+.most-popular .article ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
 
 .most-popular ul li:last-child {
   border : none;
@@ -765,6 +719,10 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
 }
 
 /***************************************************************************/
+
+.latest-deals {
+  margin-top: 60px;
+}
 
 .latest-deals .headings {
   display: flex;
@@ -860,9 +818,8 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
 /**************************************************************************/
 
 footer {
-  margin-top: 10px;
+  margin-top: 30px;
   width: 100%;
-  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -875,12 +832,13 @@ footer .contact {
   height: 100%;
   width: 100%;
   background-color: rgb(26,26,28);
+  padding: 20px 0;
 }
 
 .contact .share {
   width: 400px;
   height: 50px;
-  margin: auto;
+  margin: 40px auto;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -927,7 +885,6 @@ footer .contact {
 }
 
 footer .copyright {
-  height: 60%;
   width: 100%;
   text-align: center;
   background-color: black ;
