@@ -887,7 +887,7 @@ footer .copyright {
 }
 
 .copyright span {
-  margin: auto;
+  margin: 0 5px;
 }
 
 footer b {
@@ -900,5 +900,5 @@ footer b {
   margin: 50px auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
