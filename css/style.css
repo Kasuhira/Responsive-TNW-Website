@@ -677,8 +677,64 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(225,241,245,0) 100%);
   margin-top : 15px ;
 }
 
-.most-popular .right {
+.most-popular .right1 {
   background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_4ccb0673.png');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular .right2 {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/iPhone-11.00_05_06_23.Still019.png');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular .right3 {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/1-11.jpg');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular .right4 {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/Annotation-2019-09-19-121214.png');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular .right5 {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/video-gaming.jpg');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular .right6 {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/04/Untitled-design-5.jpg');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular .right7 {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Press-Conference-with-Eric-Esrailian-Alexis-Ohanian-Hakob-Arshakyan-Yervant-Zorian-and-Serj-Tankian-hed.jpg');
+  background-position: center;
+  background-size: 200%;
+  height: 100px; 
+  width: 25%;
+}
+
+.most-popular .right8 {
+  background-image: url('https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Cavier-Jesus-Phone.jpg');
   background-position: center;
   background-size: 200%;
   height: 100px; 
